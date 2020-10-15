@@ -57,7 +57,7 @@ set incsearch
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-set textwidth=79
+"set textwidth=130
 set expandtab
 set autoindent
 set fileformat=unix
@@ -82,7 +82,7 @@ au BufReadPost *
                \ endif
 
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%90v.\+/
+match OverLength /\%120v.\+/
 
 " map escape to remove text highlights in addition to regular behavior
 nnoremap <silent> <esc> :noh<cr><esc>
@@ -93,3 +93,8 @@ noremap <c-j> ddp
 
 :hi Directory guifg=#00FF00 ctermfg=green
 "nnoremap <space> za
+
+if $TERM =~ 'xterm-256color'
+  set noek
+endif
+
