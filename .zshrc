@@ -92,7 +92,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias c="clear && clear"
-alias gh="~/cust_progs/gh"
+alias github="~/cust_progs/github"
 alias subl="~/cust_progs/subl"
 alias jup_connect="ssh -N -f -L localhost:8888:localhost:55555 amerrill@fawkes"
 alias i="cd ~/iCloud"
@@ -105,11 +105,22 @@ function jup {
 alias john="jtr/run/john"
 alias arbitrage="ssh amerrill@192.168.1.217"
 alias schizo="ssh alm1995@schizo.cs.byu.edu"
-alias pi="ssh pi@192.168.1.124"
+alias pi="ssh pi@192.168.86.91"
 alias python='python3'
+alias oops='fuck'
 
-
-
+# Delicious AI aliases
+alias deus="ssh deus_ex_machina@98.202.95.148 -p 49155 -X"
+alias szeth2="ssh -i ~/DAI/AWS/g4dn_xlarge_gpu_instance.pem ubuntu@ec2-54-219-135-235.us-west-1.compute.amazonaws.com"
+alias szeth="ssh -i ~/DAI/AWS/g4dn_xlarge_gpu_instance.pem ubuntu@54.219.135.235"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/merrill/DAI/external/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/merrill/DAI/external/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/merrill/DAI/external/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/merrill/DAI/external/google-cloud-sdk/completion.zsh.inc'; fi
+
+eval $(thefuck --alias)
