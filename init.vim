@@ -10,10 +10,10 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'w0ng/vim-hybrid'
     Plug 'bitterjug/vim-colors-bitterjug'
     Plug 'jonathanfilip/vim-lucius'
-    Plug 'crusoexia/vim-monokai'
-    Plug 'jacoborus/tender.vim'
-    Plug 'pbrisbin/vim-colors-off'
-    Plug 'muellan/am-colors'
+    "Plug 'crusoexia/vim-monokai'
+    "Plug 'jacoborus/tender.vim'
+    "Plug 'pbrisbin/vim-colors-off'
+    "Plug 'muellan/am-colors'
     Plug 'blueshirts/darcula'
 " setup vim-plug
     Plug 'davidhalter/jedi-vim'
@@ -31,18 +31,21 @@ call plug#begin('~/.local/share/nvim/plugged')
 " nerd commenter
     Plug 'scrooloose/nerdcommenter'
 " auto format
-    Plug 'sbdchd/neoformat'
+    "Plug 'sbdchd/neoformat'
 " code compiling/linting
-    Plug 'neomake/neomake'
+    "Plug 'neomake/neomake'
 " ctl-n to go through words, c to change
     Plug 'terryma/vim-multiple-cursors'
 " highlight yank area
     Plug 'machakann/vim-highlightedyank'
 " folding using zo, zO, zc and zC
-    "Plug 'tmhedberg/SimpylFold'
+    Plug 'tmhedberg/SimpylFold'
+" ctrl p for file search    
+    Plug 'ctrlpvim/ctrlp.vim'
+    "
 call plug#end()
 
-colorscheme gruvbox
+colorscheme lucius
 set background=dark
 
 " set
@@ -71,12 +74,12 @@ set number
 :  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
 :  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 :augroup END
-set statusline="%f%m%r%h%w [%Y] [0x%02.2B]%< %F%=%4v,%4l %3p%% of %L"
+" set statusline="%f%m%r%h%w [%Y] [0x%02.2B]%< %F%=%4v,%4l %3p%% of %L"
 set showcmd
 
-"set foldmethod=indent
-"set foldlevel=99
-"set nu rnu
+set foldmethod=indent
+set foldlevel=99
+set nu rnu
 
 " Move cursor to where it was last time the file was open on file open
 au BufReadPost *
